@@ -1,0 +1,787 @@
+mixed-port: 17890
+allow-lan: false
+log-level: warning
+external-controller: 127.0.0.1:19090
+proxies:
+- name: 原生地址-443-WS-TLS
+  type: vless
+  server: byjoeycfnew.lyqnihao.dpdns.org
+  port: 443
+  uuid: af475b0e-0c07-40fe-b4db-3dea2c0a481d
+  tls: true
+  skip-cert-verify: true
+  servername: byjoeycfnew.lyqnihao.dpdns.org
+  network: ws
+  client-fingerprint: chrome
+  alpn:
+  - h3%2Ch2%2Chttp%2F1.1
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: byjoeycfnew.lyqnihao.dpdns.org
+  tfo: false
+  encryption: none
+- name: 原生地址-443-Trojan-WS-TLS
+  type: trojan
+  server: byjoeycfnew.lyqnihao.dpdns.org
+  port: 443
+  password: af475b0e-0c07-40fe-b4db-3dea2c0a481d
+  skip-cert-verify: true
+  sni: byjoeycfnew.lyqnihao.dpdns.org
+  network: ws
+  alpn:
+  - h3%2Ch2%2Chttp%2F1.1
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: byjoeycfnew.lyqnihao.dpdns.org
+- name: 🇨🇳 台湾家宽 08 ⌈wzdnzd/aggregator⌋ -45
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62212
+  uuid: f08f0555-679b-4d33-b1dc-7601b4e1e76a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳 台湾家宽 04 ⌈wzdnzd/aggregator⌋ -59
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62205
+  uuid: f08f0555-679b-4d33-b1dc-7601b4e1e76a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇭🇰 香港家宽 07 ⌈wzdnzd/aggregator⌋ -69
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62210
+  uuid: d244d501-565c-420b-800a-3c00f17d624a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇭🇰 香港家宽 09 ⌈wzdnzd/aggregator⌋ -119
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62210
+  uuid: b8cbe1e8-05fc-450f-b018-85f94f0adcf8
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳 台湾家宽 03 ⌈wzdnzd/aggregator⌋ -120
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62205
+  uuid: 86fd1e39-95c5-4309-aff2-ff877f480ad7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇭🇰 香港家宽 03 ⌈wzdnzd/aggregator⌋ -122
+  type: http
+  server: f11cf6fc-ta1og0-taksay-1tcuf.hkt.cdnhuawei.com
+  port: 8443
+  password: <password>
+  tls: true
+  skip-cert-verify: true
+  username: 3952a514-eaa7-11ef-97da-f23c91cfbbc9
+- name: 🇭🇰 香港家宽 11 ⌈wzdnzd/aggregator⌋ -126
+  type: vmess
+  server: gdcn.coloss.cn
+  port: 62216
+  uuid: d244d501-565c-420b-800a-3c00f17d624a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳 台湾家宽 02 -154
+  type: ss
+  server: dafeizhu.whtjdasha.com
+  port: 32207
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NmQyMGEwODQtYzBkOS00YQ==
+  cipher: 2022-blake3-aes-128-gcm
+- name: 🇰🇷 韩国家宽 01 -181
+  type: ss
+  server: dafeizhu.whtjdasha.com
+  port: 39206
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NmQyMGEwODQtYzBkOS00YQ==
+  cipher: 2022-blake3-aes-128-gcm
+- name: 🇨🇳 台湾家宽 03 -187
+  type: vless
+  server: c8217-b2a.h1.49d2.5e11.613.b297.djjsvip.cfd
+  port: 443
+  uuid: 1bce1f4a-3a17-4e13-8b47-9090b39297a4
+  tls: true
+  skip-cert-verify: true
+  servername: www.microsoft.com
+  network: tcp
+  client-fingerprint: safari
+  reality-opts:
+    public-key: -QnsFApdhq1l1d2h302qhAs7usDdWLBTAOeMH54dwmU
+    short-id: c2bdc032
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 19 -209
+  type: vless
+  server: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  port: 8080
+  uuid: 1f13c9d1-6f11-4c92-9117-0a2e73d8518a
+  tls: true
+  skip-cert-verify: true
+  servername: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 02 -211
+  type: vless
+  server: l4m5jpjr4x5.ab15ij.starwayvpn.com
+  port: 443
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: l4m5jpjr4x5.ab15ij.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 16 -212
+  type: vless
+  server: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  port: 443
+  uuid: 1f13c9d1-6f11-4c92-9117-0a2e73d8518a
+  tls: true
+  skip-cert-verify: true
+  servername: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 10 -213
+  type: vless
+  server: h6i7jpcf0t1.wx13ef.starwayvpn.com
+  port: 443
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: h6i7jpcf0t1.wx13ef.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 32 -215
+  type: vless
+  server: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  port: 30000
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: p1q2hkdx3a4.ef30mn.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇺🇸 美国家宽 06 -216
+  type: vless
+  server: v2w3jppq4g5.kl20st.starwayvpn.com
+  port: 443
+  uuid: 1f13c9d1-6f11-4c92-9117-0a2e73d8518a
+  tls: true
+  skip-cert-verify: true
+  servername: v2w3jppq4g5.kl20st.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 08 -217
+  type: vless
+  server: j2k3jppq2v3.yz14gh.starwayvpn.com
+  port: 443
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: j2k3jppq2v3.yz14gh.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 23 -226
+  type: vmess
+  server: fb2df224-t9sf40-truoje-1uni.hkt.gotochinatown.net
+  port: 80
+  uuid: adbd0a82-3336-11ed-bd7c-f23c913c8d2b
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+- name: 🇺🇸 美国家宽 09 -227
+  type: vless
+  server: r4s5jpdx0c1.gh18op.starwayvpn.com
+  port: 443
+  uuid: 1f13c9d1-6f11-4c92-9117-0a2e73d8518a
+  tls: true
+  skip-cert-verify: true
+  servername: r4s5jpdx0c1.gh18op.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 香港家宽 22 -228
+  type: vmess
+  server: f6d8c7bd-t9sf40-ts40sw-14g76.hkt.gotochinatown.net
+  port: 80
+  uuid: 4729b4c8-1790-11eb-8684-f23c913c8d2b
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+- name: 🇺🇸 美国家宽 08 -230
+  type: vless
+  server: t6u7jpcf2e3.ij19qr.starwayvpn.com
+  port: 443
+  uuid: 1f13c9d1-6f11-4c92-9117-0a2e73d8518a
+  tls: true
+  skip-cert-verify: true
+  servername: t6u7jpcf2e3.ij19qr.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇺🇸 美国家宽 04 -240
+  type: vless
+  server: p2q3jpvm8a9.ef17mn.starwayvpn.com
+  port: 443
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: p2q3jpvm8a9.ef17mn.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇺🇸 美国家宽 10 -244
+  type: vless
+  server: n6o7jpzn6z7.cd16kl.starwayvpn.com
+  port: 443
+  uuid: 5ee68dd8-0da7-4483-bd49-1b3235f361a5
+  tls: true
+  skip-cert-verify: true
+  servername: n6o7jpzn6z7.cd16kl.starwayvpn.com
+  network: tcp
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  tfo: false
+  encryption: none
+- name: 🇭🇰 HK39｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31103
+  password: 155bc127-485a-44b2-8e38-3fbf711a6e25
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK40｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31103
+  password: 2c621c92-d595-45b5-ad62-2f69a3d62a54
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK42｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31103
+  password: 4755e7eb-1d68-4808-ab81-18de1e602290
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK43｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31103
+  password: 4df6304c-39f9-4cc2-9d64-e7cba3fc12e4
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK14｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31102
+  password: 4df6304c-39f9-4cc2-9d64-e7cba3fc12e4
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK15｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31101
+  password: 155bc127-485a-44b2-8e38-3fbf711a6e25
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK21｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 31101
+  password: 4755e7eb-1d68-4808-ab81-18de1e602290
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇮🇳 IN4｜家宽｜非常安全
+  type: vmess
+  server: id2.wpairplane.com
+  port: 9000
+  uuid: 77aad73d-03e7-441b-9bc5-98d13535ba3e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇩🇪 DE105｜原生/疑似家宽｜高风险 (黑名单)
+  type: socks5
+  server: 193.233.254.9
+  port: 1080
+  skip-cert-verify: true
+  username: T2dAMTkzLjIzMy4yNTQuOTo%3D
+- name: 🇩🇪 DE148｜原生/疑似家宽｜高风险 (黑名单)
+  type: socks5
+  server: 193.233.254.7
+  port: 1080
+  skip-cert-verify: true
+  username: T2dAMTkzLjIzMy4yNTQuNzo%3D
+- name: 🇭🇰 HK33｜家宽｜非常安全
+  type: trojan
+  server: 219.76.135.98
+  port: 443
+  password: BxceQaOe
+  skip-cert-verify: true
+  sni: 219.76.135.98
+- name: 🇺🇸 US81｜家宽｜非常安全
+  type: trojan
+  server: green2.cdntencentmusic.com
+  port: 35501
+  password: 155bc127-485a-44b2-8e38-3fbf711a6e25
+  skip-cert-verify: true
+  sni: green2.cdntencentmusic.com
+- name: 🇭🇰 HK47｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: bestcdn1.868863.xyz
+  port: 2087
+  password: 5d21ca08-7d16-4230-a20b-01edd62751f4
+  skip-cert-verify: true
+  sni: 17707072628528.206356.xyz
+  network: ws
+  ws-opts:
+    path: '%2Fdmusicmuaawe'
+    headers:
+      Host: 17707072628528.206356.xyz
+- name: 🇭🇰 HK48｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: bestcdn2.868863.xyz
+  port: 2096
+  password: 5d21ca08-7d16-4230-a20b-01edd62751f4
+  skip-cert-verify: true
+  sni: 17707072626187.206356.xyz
+  network: ws
+  ws-opts:
+    path: '%2Fdmusicmuaawe'
+    headers:
+      Host: 17707072626187.206356.xyz
+- name: 🇭🇰 HK49｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: bestcdn3.868863.xyz
+  port: 2053
+  password: 5d21ca08-7d16-4230-a20b-01edd62751f4
+  skip-cert-verify: true
+  sni: 17707072621786.206356.xyz
+  network: ws
+  ws-opts:
+    path: '%2Fdmusicmuaawe'
+    headers:
+      Host: 17707072621786.206356.xyz
+- name: 🇭🇰 HK50｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: bestcdn4.868863.xyz
+  port: 2083
+  password: 5d21ca08-7d16-4230-a20b-01edd62751f4
+  skip-cert-verify: true
+  sni: 17707072625761.206356.xyz
+  network: ws
+  ws-opts:
+    path: '%2Fdmusicmuaawe'
+    headers:
+      Host: 17707072625761.206356.xyz
+- name: 🇭🇰 HK51｜原生/疑似家宽｜非常安全
+  type: trojan
+  server: bestcdn5.868863.xyz
+  port: 8443
+  password: 5d21ca08-7d16-4230-a20b-01edd62751f4
+  skip-cert-verify: true
+  sni: 17707072625115.206356.xyz
+  network: ws
+  ws-opts:
+    path: '%2Fdmusicmuaawe'
+    headers:
+      Host: 17707072625115.206356.xyz
+- name: 🇷🇺 RU1｜家宽｜高风险 (黑名单)
+  type: socks5
+  server: 46.146.220.247
+  port: 1080
+  skip-cert-verify: true
+  username: Og%3D%3D
+- name: 🇭🇰 HK59｜家宽｜非常安全
+  type: vmess
+  server: jy-hk.kunlun07dns.com
+  port: 19224
+  uuid: 48d361a8-e9a1-3c28-9b51-47775d62077e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇭🇰 HK60｜家宽｜非常安全
+  type: vmess
+  server: jy-hk.kunlun07dns.com
+  port: 19227
+  uuid: 48d361a8-e9a1-3c28-9b51-47775d62077e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 US131｜家宽｜非常安全
+  type: vmess
+  server: jy-us.kunlun07dns.com
+  port: 19214
+  uuid: 48d361a8-e9a1-3c28-9b51-47775d62077e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇭🇰 HK58｜原生/疑似家宽｜非常安全
+  type: vmess
+  server: 45.207.157.29
+  port: 13852
+  uuid: 845764df-ecb3-4b13-bed2-bf1551b68e9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 US135｜家宽｜非常安全
+  type: trojan
+  server: 104.11.86.252
+  port: 443
+  password: hSA6YXe15O
+  skip-cert-verify: true
+  sni: 104.11.86.252
+- name: '[freeSub#005] A🟢🇨🇳res[🎞️📦]_dokng.com_0da15920'
+  type: vmess
+  server: 112.132.215.108
+  port: 50002
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: tcp
+  udp: true
+  xudp: true
+- name: '[freeSub#032] A🟢🇭🇰res[🎬📺🎭🔍]_dokng.com_8f17f544'
+  type: http
+  server: 118.25.131.160
+  port: 10007
+  tls: true
+  skip-cert-verify: true
+- name: '[freeSub#041] A🟢🇹🇷res[📺🎪📦]_dokng.com_6aa93fc5'
+  type: vless
+  server: 193.160.140.118
+  port: 443
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  tls: true
+  skip-cert-verify: false
+  servername: ozon.ru
+  sni: ozon.ru
+  network: tcp
+  udp: true
+  client-fingerprint: edge
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  flow: xtls-rprx-vision
+  encryption: none
+- name: '[freeSub#108] A🟢🇺🇸res[📺🔍]_dokng.com_72dc0f38'
+  type: trojan
+  server: www.777061.xyz
+  port: 18603
+  password: lk59gDrTm2
+  sni: www.777061.xyz
+- name: '[freeSub#132] A🟢🇬🇧res[🎬📺🎭🎪]_dokng.com_f93e7f0f'
+  type: vless
+  server: pl1.mycloud1.org
+  port: 443
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+  tls: true
+  skip-cert-verify: false
+  servername: pl1.mycloud1.org
+  sni: pl1.mycloud1.org
+  network: tcp
+  udp: true
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: afee962d
+  flow: xtls-rprx-vision
+  encryption: none
+- name: '[freeSub#139] A🟢🇲🇽res[📺✨]_dokng.com_a2c32b9c'
+  type: http
+  server: 45.5.94.243
+  port: 999
+- name: '[freeSub#219] A🟢🇫🇷res[🎬🤖📺🎭]_dokng.com_071a491a'
+  type: http
+  server: 62.210.27.111
+  port: 443
+  tls: true
+  skip-cert-verify: true
+- name: '[freeSub#272] A🟢🇩🇪res[🎬🤖📺🎭]_dokng.com_2bb190b7'
+  type: http
+  server: 79.127.156.177
+  port: 9443
+  password: None
+  tls: true
+  skip-cert-verify: true
+- name: '[freeSub#373] A🟢🇨🇴res[🎬🤖📺🎭]_dokng.com_9cbcc1c0'
+  type: http
+  server: 181.129.16.218
+  port: 8080
+- name: '[freeSub#381] A🟢🇻🇪res[🎭]_dokng.com_0c8e0d98'
+  type: http
+  server: 38.51.207.104
+  port: 8080
+- name: '[freeSub#445] A🟢🇧🇷res[📺]_dokng.com_75602843'
+  type: http
+  server: 179.184.163.133
+  port: 44443
+- name: A🟢🇸🇨res[🎬📺🎭🎪]_dokng.com_83774aea
+  type: vmess
+  server: 156.239.224.107
+  port: 57278
+  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+- name: A🟢🇺🇸res[📺]_dokng.com_d90b9e81
+  type: vless
+  server: 31.76.89.226
+  port: 443
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  tls: true
+  servername: ai.eosshop.net
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  http-opts:
+    headers: {}
+    path:
+    - /
+  reality-opts:
+    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+  flow: xtls-rprx-vision
+  encryption: none
+  xudp: true
+- name: A🟢🇲🇰res[🎬🤖📺🎭]_dokng.com_c0153ab9
+  type: vless
+  server: 89.185.82.151
+  port: 10443
+  uuid: 0869a7d7-b8e8-42be-8bca-84b0ab07744a
+  tls: true
+  skip-cert-verify: false
+  servername: stackoverflow.com
+  sni: stackoverflow.com
+  network: tcp
+  udp: true
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: XNfikFybWtjJjWU7-QBGrr-D9YUW0uSK_sR7mDDUmRU
+    short-id: 6ba85179
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬🤖📺🎭]_dokng.com_072be47a
+  type: vless
+  server: 50.7.245.206
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬🤖📺🎭]_dokng.com_09010c46
+  type: vless
+  server: 50.7.245.220
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬🤖📺🎭]_dokng.com_130bef1f
+  type: vless
+  server: 50.7.245.210
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬📺🎭🎪]_dokng.com_231a787d
+  type: vless
+  server: 50.7.245.203
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬📺🎭🎪]_dokng.com_67d20b84
+  type: vless
+  server: 50.7.245.213
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🤖📺🎭🎪]_dokng.com_e5267153
+  type: vless
+  server: 50.7.245.212
+  port: 443
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬🤖📺🎭]_dokng.com_f1fac5a9
+  type: vless
+  server: 50.7.245.211
+  port: 2083
+  uuid: eb675a0a-5c78-44a7-8a0d-02ffaf18fdf5
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: A🟢🇺🇸res[🎬🤖📺🎭]_dokng.com_c4d8f7e5
+  type: vless
+  server: 67.159.47.237
+  port: 443
+  uuid: d437e5d9-9652-4603-a540-240956e0cd5a
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  sni: www.apple.com
+  network: tcp
+  udp: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
+    short-id: 3869d49a9a79e06a
+  flow: xtls-rprx-vision
+  encryption: none
+- name: 0|🇭🇰香港家宽 03 | 1x HK
+  type: ss
+  server: free.2apzhfa.xyz
+  port: 31145
+  password: 035ceef0-c949-4e4e-bcaa-aaaafb9d0549
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 0|🇺🇸美国家宽 02 | 1x US Los Angeles
+  type: ss
+  server: free.2apzhfa.xyz
+  port: 31213
+  password: 035ceef0-c949-4e4e-bcaa-aaaafb9d0549
+  cipher: chacha20-ietf-poly1305
+  udp: true
+- name: 0|🇬🇧英国家宽 01 | 1x UK
+  type: ss
+  server: free.2apzhfa.xyz
+  port: 31271
+  password: 035ceef0-c949-4e4e-bcaa-aaaafb9d0549
+  cipher: chacha20-ietf-poly1305
+  udp: true
